@@ -14,7 +14,7 @@ before_install:
    - if [ "$TRAVIS_CPU_ARCH" = "ppc64le" ]; then
        sudo apt-get install liblapack-dev libboost-program-options-dev -y;
      else
-       sudo apt-get install g++-4.9 liblapack-dev libboost-program-options-dev -y
+       sudo apt-get install g++-4.9 liblapack-dev libboost-program-options-dev -y;
      fi
      
 install:
