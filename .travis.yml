@@ -10,10 +10,11 @@ arch:
 
 before_install:
    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-   - sudo apt-get update -qq
    - if [ "$TRAVIS_CPU_ARCH" = "ppc64le" ]; then
         echo 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu trusty main' >> /etc/apt/sources.list;
      fi
+   - sudo apt-get update -qq
+ 
    #- if [ "$TRAVIS_CPU_ARCH" = "ppc64le" ]; then
    #    sudo apt-get install liblapack-dev libboost-program-options-dev -y;
    #  else
